@@ -155,6 +155,8 @@ export default class Collider2D {
 
       this._T_COLLISION_DETAILS.aInB = a.radius <= b.radius && dist <= b.radius - a.radius;
       this._T_COLLISION_DETAILS.bInA = b.radius <= a.radius && dist <= a.radius - b.radius;
+      
+      this._T_VECTORS.push(differenceV);
 
       return this._T_COLLISION_DETAILS;
     }
